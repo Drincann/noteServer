@@ -4,36 +4,36 @@ $.ajax({
   url: './getSidebar'
 }).done(function (sidebar) {
   // plugin: 搜索 api，注册回调
-  let searchPlugin = {
-    name: 'searchPlugin',
-    extend: (api) => {
-      api.enableSearch({
-        handler: key => {
-          if (!(key.trim())) {
-            return [];
-          }
-          return new Promise((resolve, reject) => {
-            $.ajax({
-              // 请求搜索接口
-              type: 'get',
-              url: './search',
-              data: {
-                key
-              },
-              success(data) {
-                resolve(data);
-              },
-              error(xhr) {
-                reject('请求 search 路由出错：');
-                console.error('请求 search 路由出错：');
-                console.error(xhr);
-              }
-            })
-          });
-        }
-      });
-    }
-  }
+  // let searchPlugin = {
+  //   name: 'searchPlugin',
+  //   extend: (api) => {
+  //     api.enableSearch({
+  //       handler: key => {
+  //         if (!(key.trim())) {
+  //           return [];
+  //         }
+  //         return new Promise((resolve, reject) => {
+  //           $.ajax({
+  //             // 请求搜索接口
+  //             type: 'get',
+  //             url: './search',
+  //             data: {
+  //               key
+  //             },
+  //             success(data) {
+  //               resolve(data);
+  //             },
+  //             error(xhr) {
+  //               reject('请求 search 路由出错：');
+  //               console.error('请求 search 路由出错：');
+  //               console.error(xhr);
+  //             }
+  //           })
+  //         });
+  //       }
+  //     });
+  //   }
+  // }
   // plugin: 页面刷新 api，用来刷新 valine 及渲染 mermaid
   let refreshValine = {
     name: 'refreshValine',
@@ -102,7 +102,7 @@ $.ajax({
       link: 'https://blog.csdn.net/qq_16181837'
     }],
     plugins: [
-      searchPlugin,
+      // searchPlugin,
       refreshValine,
       onParseCode,
     ],
