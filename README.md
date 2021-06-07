@@ -1,5 +1,11 @@
 # usage
 
+build
+
+```sh
+docker build -t note
+```
+
 windows: powershell
 
 ```ps1
