@@ -1,1 +1,1 @@
-docker run -v "${docroot}:/app/public/doc" -p 8080:80 -d note
+docker run -v "${docroot}:/app/public/doc" -p 80:80 -d note
