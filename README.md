@@ -15,5 +15,5 @@ $env:docroot="X:\path-to-docroot" | ./startup.ps1
 linux: shell
 
 ```sh
-export docroot="/path-to-docroot" | ./startup.sh
+export docroot="/path-to-docroot" ; ./startup.sh
 ```
