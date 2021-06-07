@@ -1,1 +1,1 @@
-sudo docker run -v "${docroot}:/app/public/doc" -p 80:80 -d note
+sudo docker run -v "$docroot:/app/public/doc" -p 80:80 -d note
