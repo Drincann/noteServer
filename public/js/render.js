@@ -34,7 +34,7 @@ $.ajax({
   //     });
   //   }
   // }
-  // plugin: 页面刷新 api，用来刷新 valine 及渲染 mermaid
+  // plugin: 页面刷新 api，用来刷新 valine 及渲染 mermaid latexß
   let refreshValine = {
     name: 'refreshValine',
     extend(api) {
@@ -52,6 +52,14 @@ $.ajax({
 
         // parse mermaid
         mermaid.init(undefined, '.mermaid');
+
+        // parse latex
+        renderMathInElement($('#content')[0], {
+          delimiters: [
+            { left: '$$', right: '$$', display: true }
+          ],
+          throwOnError: false
+        });
       });
     },
   }
