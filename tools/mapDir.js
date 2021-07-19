@@ -13,7 +13,7 @@ module.exports = function mapDir(dir) {
       if (file.slice(-3) == '.md') {
         obj.push({
           title: file,
-          link: dir.replace('/app/public/doc', '') + '/' + file
+          link: dir.replace(require('path').resolve(dir, '..'), '') + '/' + file
         });
       }
 
