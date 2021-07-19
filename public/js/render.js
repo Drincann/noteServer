@@ -54,7 +54,7 @@ $.ajax({
         mermaid.init(undefined, '.mermaid');
 
         // parse latex
-        renderMathInElement($('#content')[0], {
+        renderMathInElement(document.body, {
           delimiters: [
             { left: '$$', right: '$$', display: true }
           ],
@@ -134,5 +134,13 @@ $.ajax({
   setInterval(() => {
     // parse mermaid
     mermaid.init(undefined, '.mermaid');
+
+    // parse latex
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true }
+      ],
+      throwOnError: false
+    });
   }, 2000);
 });
