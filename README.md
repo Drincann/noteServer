@@ -3,7 +3,7 @@
 build
 
 ```sh
-docker build -t note
+docker build -t note .
 ```
 
 windows: powershell
