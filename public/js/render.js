@@ -56,7 +56,8 @@ $.ajax({
         // parse latex
         renderMathInElement(document.body, {
           delimiters: [
-            { left: '$$', right: '$$', display: true }
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
           ],
           throwOnError: false
         });
@@ -138,7 +139,8 @@ $.ajax({
     // parse latex
     renderMathInElement(document.body, {
       delimiters: [
-        { left: '$$', right: '$$', display: true }
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false }
       ],
       throwOnError: false
     });
