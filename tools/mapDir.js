@@ -1,5 +1,7 @@
 const fs = require('fs');
-module.exports = function mapDir(dir) {
+const path = require('path');
+
+function dfs(dir, root) {
   let obj = [];
   let fileList = fs.readdirSync(dir);
   for (file of fileList) {
@@ -7,13 +9,13 @@ module.exports = function mapDir(dir) {
     if (stats.isDirectory()) {
       obj.push({
         title: file,
-        children: mapDir(dir + '/' + file)
+        children: dfs(dir + '/' + file, root)
       });
     } else if (stats.isFile()) {
       if (file.slice(-3) == '.md') {
         obj.push({
           title: file,
-          link: dir.replace(require('path').resolve(dir, '..'), '') + '/' + file
+          link: dir.replace(root, '') + '/' + file
         });
       }
 
@@ -21,3 +23,6 @@ module.exports = function mapDir(dir) {
   }
   return obj;
 }
+
+module.exports = (dir) => dfs(path.resolve(dir), path.resolve(dir))
+
