@@ -64,7 +64,7 @@ $.ajax({
       });
 
       // 由于 \\ 将被转义为一个 \，故将所有 latex 的 \\ 转换为 \\\\，供 katex 正常解析
-      api.processMarkdown(markdown => markdown.replaceAll(/(\$\$)[^\$]*(\$\$)/g, latex => latex.replaceAll(/\\\\/g, '\\\\\\\\')));
+      api.processMarkdown(markdown => markdown.replace(/(\$\$)[^\$]*(\$\$)/g, latex => latex.replace(/\\\\/g, '\\\\\\\\')));
     },
   }
 
