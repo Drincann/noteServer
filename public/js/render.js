@@ -134,6 +134,26 @@ $.ajax({
     <div id="vcomments"></div>
     `);
 
+  // Sidebar 侧边栏操作
+  // 关闭所有未选中的目录项
+  $('.Sidebar .SidebarItems .open').filter((i, e) => $(e).parent().siblings('.ItemChildren').find('.active').length == 0).click();
+  // 滚动到 active 的项目上
+  setTimeout(() => {
+    let activeTop = $('.Sidebar .SidebarItems .active').parent().parent().siblings('.ItemTitle').offset() == undefined
+      ? 0
+      : $('.Sidebar .SidebarItems .active').parent().parent().siblings('.ItemTitle').offset().top;
+
+    let sidebarTop = $('.Sidebar').offset() == undefined
+      ? 0
+      : $('.Sidebar').offset().top;
+
+    $('.Sidebar').animate({
+      scrollTop: activeTop - sidebar + $('.Sidebar').scrollTop() - 10,
+    }, 1500);
+  }, 0);
+
+
+
   // 由于 docute onContentUpdated 接口回调功能存在 bug，无法有效刷新渲染，这里两秒自动渲染一次
   setInterval(() => {
     // parse mermaid
