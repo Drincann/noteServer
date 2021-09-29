@@ -7,14 +7,14 @@ Has any questions?
 Is there anything wrong with that?
 
 ```go
-func (gaolihai *Developer) GetContact(whoAreYou string) {
-  gaolihai.tellMe(whoAreYou)
-  // and ...
-  return Info {
-    qq: "1019933576",
-    wx: "devGaolihai", 
-    email: "devgaolihai@foxmail.com", 
-    phoneCall: "Permission Denied"
-  }
+func (gaolihai *Developer) GetContact(who string) Info {
+	defer gaolihai.tellMe(who)
+	// and ...
+	return Info{
+		qq:        "1019933576",
+		wx:        "devGaolihai",
+		email:     "devgaolihai@foxmail.com",
+		phoneCall: "Permission Denied",
+	}
 }
 ```
