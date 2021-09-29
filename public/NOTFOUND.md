@@ -8,12 +8,12 @@ Is there anything wrong with that?
 
 ```go
 func (gaolihai *Developer) GetContact(whoAreYou string) {
-  defer gaolihai.tellMe(whoAreYou)
+  gaolihai.tellMe(whoAreYou)
   // and ...
   return Info {
-    qq: 1019933576,
-    wx: devGaolihai, 
-    email: devgaolihai@foxmail.com, 
+    qq: "1019933576",
+    wx: "devGaolihai", 
+    email: "devgaolihai@foxmail.com", 
     phoneCall: "Permission Denied"
   }
 }
