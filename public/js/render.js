@@ -93,7 +93,7 @@ $.ajax({
     disableSidebarToggle: true,
     sidebar,
     layout: 'wide',
-    highlight: ['javascript', 'java', 'cpp', 'python', 'json', 'bash', 'php', 'html', 'css', 'sql', 'typescript'],
+    highlight: ['javascript', 'java', 'cpp', 'python', 'json', 'bash', 'php', 'html', 'css', 'sql', 'typescript', 'golang'],
     target: '#content',
     darkThemeToggler: true,
     title: '高厉害的笔记本',
