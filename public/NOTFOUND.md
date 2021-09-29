@@ -6,7 +6,7 @@ Has any questions?
 
 Is there anything wrong with that?
 
-```golang
+```go
 func (gaolihai *Developer) GetContact(whereYouFrom string) {
   return Info {
     qq: 1019933576,
