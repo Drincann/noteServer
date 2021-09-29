@@ -8,7 +8,7 @@ Is there anything wrong with that?
 
 ```go
 func (gaolihai *Developer) GetContact(whoAreYou string) {
-  gaolihai.tellMe(whoAreYou)
+  defer gaolihai.tellMe(whoAreYou)
   // and ...
   return Info {
     qq: 1019933576,
