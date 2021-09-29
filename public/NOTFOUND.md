@@ -7,7 +7,9 @@ Has any questions?
 Is there anything wrong with that?
 
 ```go
-func (gaolihai *Developer) GetContact(whereYouFrom string) {
+func (gaolihai *Developer) GetContact(whoAreYou string) {
+  gaolihai.tellMe(whoAreYou)
+  // and ...
   return Info {
     qq: 1019933576,
     wx: devGaolihai, 
