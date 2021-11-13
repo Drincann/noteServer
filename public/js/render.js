@@ -39,6 +39,9 @@ $.ajax({
     name: 'refreshValine',
     extend(api) {
       api.onContentUpdated(() => {
+        // 刷新 github-calendar
+        GitHubCalendar(".calendar", "Drincann", { tooltips: true, responsive: true });
+
         // 刷新 valine
         $(document).find('.leancloud_visitors').prop('id', location.href);
         new Valine({
