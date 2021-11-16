@@ -2,19 +2,10 @@
 
 **你访问到了我的知识盲区。。。**
 
-Has any questions?
-
-Is there anything wrong with that?
-
 ```go
-func (gaolihai *Developer) GetContact(who string) Info {
-	defer gaolihai.tellMe(who)
-	// and ...
-	return Info{
-		qq:        "1019933576",
-		wx:        "devGaolihai",
-		email:     "devgaolihai@foxmail.com",
-		phoneCall: "Permission Denied",
-	}
-}
+gaolihai.pushTask(live)
+gaolihai.pushTask(code)
+// gaolihai.pushTask(boredom)
+gaolihai.pushTask(fallInLoveMaybe)
+go gaolihai.mainLoop()
 ```
