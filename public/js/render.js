@@ -49,7 +49,7 @@ $.ajax({
           appId: 'ik2aTAKBgdcRDvpwj25iFfk4-gzGzoHsz',
           appKey: 'gz4c5n4iXKA08zMuXWD7AnnY',
           path: window.location.href,
-          placeholder: '高厉害最近很不开心！',
+          placeholder: '高厉害最近非常非常非常非常开心！',
           visitor: true
         });
 
@@ -129,7 +129,7 @@ $.ajax({
     <div id="" class="leancloud_visitors" style="padding: 5px 10px; margin: 15px 0;text-align: center; background:rgba(0, 150, 136, .05); border-radius: 5px;">
         文章被点了
         <i class="leancloud-visitors-count" style="color: #009688;">loading...</i>
-        次，高厉害却一点都不开心
+        次
     </div>
     <div id="vcomments"></div>
     `);
