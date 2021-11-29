@@ -5,7 +5,6 @@
 ```go
 gaolihai.pushTask(eating)
 gaolihai.pushTask(coding)
-// gaolihai.pushTask(nothingToDo)
-gaolihai.pushTask(nowFallInLoveMaybe)
+gaolihai.pushTask(nothingToDo)
 go gaolihai.mainLoop()
 ```
