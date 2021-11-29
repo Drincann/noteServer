@@ -49,7 +49,7 @@ $.ajax({
           appId: 'ik2aTAKBgdcRDvpwj25iFfk4-gzGzoHsz',
           appKey: 'gz4c5n4iXKA08zMuXWD7AnnY',
           path: window.location.href,
-          placeholder: '高厉害最近非常非常非常非常开心！',
+          placeholder: '高厉害最近有点疑惑',
           visitor: true
         });
 
