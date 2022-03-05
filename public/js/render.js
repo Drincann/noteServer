@@ -110,6 +110,9 @@ $.ajax({
       title: 'GitHub',
       link: 'https://github.com/Drincann'
     }, {
+      title: 'Profile',
+      link: 'https://profile-summary-for-github.com/user/drincann'
+    }, {
       title: 'CSDN',
       link: 'https://blog.csdn.net/qq_16181837'
     }],
