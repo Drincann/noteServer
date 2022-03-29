@@ -151,7 +151,7 @@ $.ajax({
       : $('.Sidebar').offset().top;
 
     $('.Sidebar').animate({
-      scrollTop: activeTop - sidebar + $('.Sidebar').scrollTop() - 10,
+      scrollTop: activeTop - sidebarTop + $('.Sidebar').scrollTop() - 10,
     }, 1500);
   }, 0);
 
