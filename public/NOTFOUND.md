@@ -9,7 +9,7 @@ context.status(404).send(
   '**你访问到了我的知识盲区。。。**\n' +
   '\n' +
   '```ts\n' +
-  await fs.readFile(__filename);
+  await fs.readFile(__filename, { encoding: 'utf8'}) +
   '```\n'
 );
 ```
